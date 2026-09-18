@@ -462,3 +462,16 @@ input:focus {
     margin-left: 5px;
     font-weight: normal;
 }
+/* 기존 기본 정보 스타일 수정 */
+.basic-info {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px; /* 간격을 살짝 좁힘 */
+    flex-wrap: wrap; /* 내용이 많아지면 아래 줄로 내려가도록 설정 */
+}
+
+/* 상태 입력칸이 눈에 띄게 글씨 색을 바꾸려면 아래 코드 추가 (선택사항) */
+#status {
+    font-weight: bold;
+    color: var(--text-accent); /* 상태 이상을 눈에 띄게 붉은색 톤으로 */
+}
