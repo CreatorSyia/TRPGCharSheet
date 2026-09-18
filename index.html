@@ -217,5 +217,32 @@
             </div>
         </div>
     </div>
+    <!-- </div> (sheet-container 닫는 태그) 아래에 추가 -->
+    <script>
+        // 초상화 업로드 기능
+        const portraitBox = document.querySelector('.portrait-box');
+        const fileInput = document.getElementById('portrait-upload');
+        const previewImage = document.getElementById('portrait-preview');
+        const placeholderText = document.querySelector('.portrait-placeholder');
+
+        // 박스 클릭 시 숨겨진 파일 입력창 실행
+        portraitBox.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // 파일이 선택되었을 때 미리보기 표시
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block'; // 이미지 보이기
+                    placeholderText.style.display = 'none'; // 안내 텍스트 숨기기
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
