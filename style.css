@@ -323,3 +323,48 @@ input:focus {
 .inventory-row input:focus {
     border-bottom: 1px solid var(--text-accent);
 }
+/* --- 상단 헤더 (이름 부분) --- */
+.sheet-header {
+    text-align: center;
+    border-bottom: 2px double var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 캐릭터 이름 입력창 */
+.name-input {
+    font-family: var(--font-title);
+    color: var(--text-accent);
+    font-size: 2.8rem;
+    text-align: center;
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed transparent; /* 평소엔 밑줄 없음 */
+    transition: border-color 0.3s;
+}
+
+/* 클래스 및 종족 입력창 */
+.subtitle-input {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    text-align: center;
+    width: 60%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed transparent; /* 평소엔 밑줄 없음 */
+    transition: border-color 0.3s;
+}
+
+/* 입력창을 클릭(포커스)했을 때만 얇은 점선 밑줄이 보이도록 설정 */
+.name-input:focus,
+.subtitle-input:focus {
+    outline: none;
+    border-bottom: 1px dashed var(--border-color);
+}
