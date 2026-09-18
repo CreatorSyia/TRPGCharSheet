@@ -65,6 +65,65 @@
                 </div>
             </div>
         </div>
+        <!-- 스킬 영역 끝난 후 아래에 추가 -->
+
+        <!-- 인벤토리 (장비 및 소지품) 영역 -->
+        <div class="inventory-section">
+            <h2 class="section-title">장비 및 소지품</h2>
+            
+            <!-- 장착 중인 장비 -->
+            <div class="equipped-gear">
+                <div class="gear-slot">
+                    <label>오른손 (주무기)</label>
+                    <input type="text" placeholder="예: 낡은 롱소드">
+                </div>
+                <div class="gear-slot">
+                    <label>왼손 (보조/방패)</label>
+                    <input type="text" placeholder="예: 나무 방패">
+                </div>
+                <div class="gear-slot">
+                    <label>방어구</label>
+                    <input type="text" placeholder="예: 가죽 갑옷">
+                </div>
+                <div class="gear-slot">
+                    <label>장신구</label>
+                    <input type="text" placeholder="예: 행운의 부적">
+                </div>
+            </div>
+
+            <!-- 가방 속 소지품 (리스트) -->
+            <h3 class="subsection-title">배낭 (아이템 목록)</h3>
+            <div class="inventory-list">
+                <!-- 인벤토리 항목 제목줄 -->
+                <div class="inventory-header">
+                    <div class="col-item-name">아이템명</div>
+                    <div class="col-item-qty">수량</div>
+                    <div class="col-item-desc">비고 / 무게</div>
+                </div>
+
+                <!-- 아이템 입력 칸 (필요한 만큼 복사해서 사용) -->
+                <div class="inventory-row">
+                    <input type="text" class="col-item-name" placeholder="예: 횃불">
+                    <input type="number" class="col-item-qty" min="0" placeholder="3">
+                    <input type="text" class="col-item-desc" placeholder="어두운 곳을 밝힘">
+                </div>
+                <div class="inventory-row">
+                    <input type="text" class="col-item-name" placeholder="치유의 물약">
+                    <input type="number" class="col-item-qty" min="0" placeholder="1">
+                    <input type="text" class="col-item-desc" placeholder="체력 회복">
+                </div>
+                <div class="inventory-row">
+                    <input type="text" class="col-item-name" placeholder="">
+                    <input type="number" class="col-item-qty" min="0" placeholder="">
+                    <input type="text" class="col-item-desc" placeholder="">
+                </div>
+                <div class="inventory-row">
+                    <input type="text" class="col-item-name" placeholder="">
+                    <input type="number" class="col-item-qty" min="0" placeholder="">
+                    <input type="text" class="col-item-desc" placeholder="">
+                </div>
+            </div>
+        </div>
         <!-- 능력치 영역 -->
         <div class="stats-container">
             <div class="stat-box">
