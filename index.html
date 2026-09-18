@@ -7,57 +7,91 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <body>
     <div class="sheet-container">
-        <header class="sheet-header">
-            <input type="text" class="name-input" placeholder="캐릭터 이름" value="">
-            <input type="text" class="subtitle-input" placeholder="클래스 및 종족" value="">
-        </header>
-        <!-- 앞으로 여기에 스탯, 장비 등을 추가할 예정입니다 -->
-        <!-- 상단 헤더 (이름 부분) 아래에 들어갈 내용입니다 -->
         
-        <!-- 성별 & 재산 영역 -->
-        <div class="basic-info">
-            <div class="info-group">
-                <label for="gender">성별</label>
-                <input type="text" id="gender" placeholder="예: 여성, 남성, 무성">
+        <!-- 상단 레이아웃: 초상화와 헤더/기본정보를 가로로 배치 -->
+        <div class="top-section">
+            
+            <!-- 초상화 영역 -->
+            <div class="portrait-container">
+                <div class="portrait-box">
+                    <span class="portrait-placeholder">초상화<br>(이미지 클릭)</span>
+                    <input type="file" id="portrait-upload" accept="image/*" style="display: none;">
+                    <img id="portrait-preview" src="" alt="캐릭터 초상화" style="display: none;">
+                </div>
             </div>
-            <div class="info-group">
-                <label for="wealth">재산</label>
-                <div class="wealth-input">
-                    <input type="number" id="wealth" placeholder="0">
-                    <span>시릿</span>
+
+            <!-- 헤더 및 기본 정보 영역 -->
+            <div class="header-info-container">
+                <header class="sheet-header">
+                    <input type="text" class="name-input" placeholder="캐릭터 이름" value="">
+                    <input type="text" class="subtitle-input" placeholder="클래스 및 종족" value="">
+                </header>
+                
+                <div class="basic-info">
+                    <div class="info-group">
+                        <label for="gender">성별</label>
+                        <input type="text" id="gender" placeholder="예: 여성, 남성">
+                    </div>
+                    <div class="info-group">
+                        <label for="wealth">재산</label>
+                        <div class="wealth-input">
+                            <input type="number" id="wealth" placeholder="0">
+                            <span>시릿</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 능력치 영역 -->
+        <!-- 능력치 영역 (최대치 표기 추가) -->
         <div class="stats-container">
             <div class="stat-box">
                 <label>근력</label>
-                <input type="number" min="0" max="20" value="0">
+                <div class="stat-input-group">
+                    <input type="number" min="0" max="20" value="0">
+                    <span class="stat-max">/ 20</span>
+                </div>
             </div>
             <div class="stat-box">
                 <label>민첩</label>
-                <input type="number" min="0" max="20" value="0">
+                <div class="stat-input-group">
+                    <input type="number" min="0" max="20" value="0">
+                    <span class="stat-max">/ 20</span>
+                </div>
             </div>
             <div class="stat-box">
                 <label>체력</label>
-                <input type="number" min="0" max="20" value="0">
+                <div class="stat-input-group">
+                    <input type="number" min="0" max="20" value="0">
+                    <span class="stat-max">/ 20</span>
+                </div>
             </div>
             <div class="stat-box">
                 <label>지능</label>
-                <input type="number" min="0" max="20" value="0">
+                <div class="stat-input-group">
+                    <input type="number" min="0" max="20" value="0">
+                    <span class="stat-max">/ 20</span>
+                </div>
             </div>
             <div class="stat-box">
                 <label>마력</label>
-                <input type="number" min="0" max="10" value="0">
+                <div class="stat-input-group">
+                    <input type="number" min="0" max="10" value="0">
+                    <span class="stat-max">/ 10</span>
+                </div>
             </div>
             <div class="stat-box">
                 <label>외모</label>
-                <input type="number" min="0" max="8" value="0">
+                <div class="stat-input-group">
+                    <input type="number" min="0" max="8" value="0">
+                    <span class="stat-max">/ 8</span>
+                </div>
             </div>
         </div>
-        <!-- 능력치 영역 끝난 후 아래에 추가 -->
+        
+        <!-- 이 아래로는 기존의 스킬 영역, 인벤토리 영역이 그대로 이어집니다 -->
 
         <!-- 스킬 영역 -->
         <div class="skills-section">
