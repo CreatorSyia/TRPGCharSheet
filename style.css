@@ -161,3 +161,68 @@ input:focus {
 .stat-box input[type=number] {
     -moz-appearance: textfield;
 }
+/* --- 공통 섹션 제목 (앞으로 장비, 설정 등에도 쓰일 제목 스타일) --- */
+.section-title {
+    font-family: var(--font-title);
+    color: var(--text-accent);
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+/* --- 스킬 영역 (모험가 길드 장부 느낌) --- */
+.skills-section {
+    margin-bottom: 40px;
+}
+
+.skills-list {
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); /* 양피지 배경과 어우러지게 살짝 투명하게 */
+}
+
+.skill-header {
+    display: flex;
+    font-weight: bold;
+    font-family: var(--font-title);
+    background-color: rgba(92, 64, 51, 0.1); /* 제목줄 배경색 */
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.skill-row {
+    display: flex;
+    border-bottom: 1px dashed var(--border-color); /* 점선으로 구분 */
+    padding: 5px 10px;
+}
+
+.skill-row:last-child {
+    border-bottom: none; /* 마지막 줄은 점선 제거 */
+}
+
+/* 스킬 칸 비율 설정 */
+.col-name {
+    width: 25%;
+}
+.col-level {
+    width: 15%;
+    text-align: center;
+}
+.col-desc {
+    width: 60%;
+}
+
+/* 스킬 입력창 스타일 다듬기 */
+.skill-row input {
+    padding: 8px 5px;
+    font-size: 1rem;
+    font-family: var(--font-body); /* 본문 폰트 사용 */
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.skill-row input:focus {
+    border-bottom: 1px solid var(--text-accent); /* 입력 중일 때 붉은색 밑줄 */
+}
