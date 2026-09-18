@@ -12,7 +12,46 @@
             <h1>캐릭터 이름</h1>
             <p class="subtitle">클래스 및 종족</p>
         </header>
-        <!-- 앞으로 여기에 스탯, 장비 등을 추가할 예정입니다 -->
+        <!-- 상단 헤더 (이름 부분) 아래에 들어갈 내용입니다 -->
+        
+        <!-- 성별 & 재산 영역 -->
+        <div class="basic-info">
+            <div class="info-group">
+                <label for="gender">성별</label>
+                <input type="text" id="gender" placeholder="예: 여성, 남성, 무성">
+            </div>
+            <div class="info-group">
+                <label for="wealth">재산</label>
+                <div class="wealth-input">
+                    <input type="number" id="wealth" placeholder="0">
+                    <span>시릿</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 능력치 영역 -->
+        <div class="stats-container">
+            <div class="stat-box">
+                <label>근력</label>
+                <input type="number" min="1" max="20" value="10">
+            </div>
+            <div class="stat-box">
+                <label>민첩</label>
+                <input type="number" min="1" max="20" value="10">
+            </div>
+            <div class="stat-box">
+                <label>체력</label>
+                <input type="number" min="1" max="20" value="10">
+            </div>
+            <div class="stat-box">
+                <label>지능</label>
+                <input type="number" min="1" max="20" value="10">
+            </div>
+            <div class="stat-box">
+                <label>마력</label>
+                <input type="number" min="1" max="20" value="10">
+            </div>
+        </div>
     </div>
 </body>
 </html>
