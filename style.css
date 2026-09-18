@@ -368,3 +368,97 @@ input:focus {
     outline: none;
     border-bottom: 1px dashed var(--border-color);
 }
+/* --- 상단 레이아웃 (초상화 + 헤더/기본정보) --- */
+.top-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 초상화 영역 */
+.portrait-container {
+    flex: 0 0 180px; /* 초상화 너비 고정 */
+}
+
+.portrait-box {
+    width: 180px;
+    height: 220px;
+    border: 3px double var(--border-color);
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.portrait-box:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.portrait-placeholder {
+    color: var(--border-color);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    pointer-events: none; /* 클릭 이벤트가 부모(박스)로 넘어가게 함 */
+}
+
+#portrait-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 꽉 차게 비율 조정 */
+}
+
+/* 헤더 및 기본정보 묶음 */
+.header-info-container {
+    flex: 1; /* 남은 공간 모두 차지 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 기존 헤더 스타일 수정 (아래 여백과 선 조정) */
+.sheet-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px double var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* 기존 기본 정보 스타일 수정 (가운데 정렬) */
+.basic-info {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+/* --- 능력치 (Stats) 영역 수정 --- */
+/* (기존 .stat-box 스타일은 유지) */
+
+.stat-input-group {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.stat-input-group input {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: right; /* 숫자와 최대치가 자연스럽게 붙도록 오른쪽 정렬 */
+    width: 50px;
+    padding: 0;
+}
+
+.stat-max {
+    font-size: 1rem;
+    color: var(--text-main);
+    opacity: 0.7; /* 약간 흐리게 표시 */
+    margin-left: 5px;
+    font-weight: normal;
+}
