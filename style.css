@@ -1,0 +1,62 @@
+/* 구글 폰트 불러오기: 영문 영웅 폰트(Cinzel)와 한글 명조체(Noto Serif KR) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Serif+KR:wght@400;700&display=swap');
+
+:root {
+    /* 테마 색상 설정 */
+    --bg-color: #f4eadd; /* 양피지 느낌의 밝은 베이지 */
+    --text-main: #2b1d0e; /* 오래된 잉크 느낌의 짙은 갈색 */
+    --text-accent: #8b0000; /* 강조용 짙은 핏빛 붉은색 */
+    --border-color: #5c4033; /* 낡은 가죽/나무 느낌의 선 색상 */
+    
+    /* 은은한 종이 질감 패턴 (투명한 이미지 사용) */
+    --paper-texture: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+    
+    /* 폰트 설정 */
+    --font-title: 'Cinzel', 'Noto Serif KR', serif;
+    --font-body: 'Noto Serif KR', serif;
+}
+
+body {
+    background-color: #3e332a; /* 시트 바깥쪽 나무 탁자 느낌의 배경 */
+    color: var(--text-main);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 캐릭터 시트 본체 (양피지) */
+.sheet-container {
+    background-color: var(--bg-color);
+    background-image: var(--paper-texture);
+    max-width: 800px;
+    width: 100%;
+    min-height: 1130px; /* A4 비율과 유사하게 설정 */
+    padding: 40px;
+    border: 3px solid var(--border-color);
+    border-radius: 5px; /* 모서리를 아주 살짝 둥글게 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* 그림자로 입체감 부여 */
+}
+
+/* 상단 헤더 (이름 부분) */
+.sheet-header {
+    text-align: center;
+    border-bottom: 2px double var(--border-color); /* 두 줄 선으로 클래식함 강조 */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: var(--font-title);
+    color: var(--text-accent);
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.subtitle {
+    font-style: italic;
+    color: var(--text-main);
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
